@@ -1,0 +1,5 @@
+*.pkl
+*.pyc
+
+.idea/
+.__pycache__/
