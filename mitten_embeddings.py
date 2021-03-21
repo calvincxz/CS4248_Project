@@ -12,7 +12,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from corpus_process import get_sms_data
 
 glove_dict_path = r'../Data/embeddings_dict.pkl'
-glove_file_path = r'../Data/glove.twitter.27B/glove.twitter.27B.50d.txt'
+glove_file_path = r'../Data/glove.twitter.27B/glove.twitter.27B.100d.txt'
 
 def glove2dict(glove_filename):
     with open(glove_filename, encoding='utf-8') as f:
@@ -53,7 +53,7 @@ Xc = (X.T * X)
 Xc.setdiag(0)
 coocc_ar = Xc.toarray()
 
-mittens_model = Mittens(n=50, max_iter=1000)
+mittens_model = Mittens(n=100, max_iter=1000)
 
 print('mitten fit starts...')
 new_embeddings = mittens_model.fit(
